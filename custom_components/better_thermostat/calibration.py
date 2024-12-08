@@ -185,9 +185,9 @@ def calculate_calibration_setpoint(self, entity_id) -> Union[float, None]:
                 * valve_position
             )
 
-    if self.attr_hvac_action == HVACAction.IDLE:
-        if _calibrated_setpoint - _cur_trv_temp_s > 0.0:
-            _calibrated_setpoint -= self.tolerance
+#    if self.attr_hvac_action == HVACAction.IDLE:
+#        if _calibrated_setpoint - _cur_trv_temp_s > 0.0:
+#            _calibrated_setpoint -= self.tolerance
 
     _calibrated_setpoint = fix_target_temperature_calibration(
         self, entity_id, _calibrated_setpoint
